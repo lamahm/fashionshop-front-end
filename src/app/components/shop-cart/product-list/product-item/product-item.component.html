@@ -1,0 +1,24 @@
+<div class="card shadow-sm">
+    <img class="bd-placeholder-img card-img-top" width="100%" [src]="productItem.imageUrl"/>
+
+    <div class="card-body">
+      <p class="card-text">
+        <strong>
+          {{productItem.price | currency}}
+        </strong>
+      </p>
+      <p class="card-text" style="color: rgb(82, 82, 82);"><strong>{{productItem.name}}</strong></p>
+      <p class="card-text">{{productItem.description | slice: 0:50}} ...</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <a 
+          type="button" 
+          class="btn btn-sm btn-primary product-btn"
+          (click)="handleAddToCart(productItem.name, productItem.price, productItem._id)"
+          *ngIf="userService.isLoggedIn()">
+          Add to Cart</a>
+          <button type="button" class="btn btn-sm btn-outline-secondary product-btn">Details</button>
+        </div>
+      </div>
+    </div>
+  </div> 

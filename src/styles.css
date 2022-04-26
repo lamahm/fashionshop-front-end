@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+.cart-item {
+    font-size: small;
+}
+
+.product-btn {
+    font-size: smaller;
+}
+
+.fa-heart {
+    color: rgb(255, 58, 91);
+    cursor: pointer;
+}
+
+.login-card h3 {
+    text-transform: uppercase;
+    font-size: large;
+}
+
+.login-card label {
+    font-size: small;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    cursor: not-allowed;
+}

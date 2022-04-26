@@ -1,0 +1,28 @@
+<div class="card mb-2">
+    <h5 class="card-header">All users</h5>
+    <div class="card-body">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let user of usersList">
+                        <td> {{user.username}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.usertype}}</td>
+                        <td><a (click)="deleteUser(user.username)" class="btn btn-primary">Delete</a></td>
+                        <td><a (click)="deleteUser(user.username)" class="btn btn-primary">Edit</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</div>
